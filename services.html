@@ -1,50 +1,244 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paslaugos | Georgij Moisejev</title>
+  <meta name="description" content="Programavimo ir automatizavimo paslaugos">
+  <meta name="keywords" content="Python, HTML, CSS, C#, WinUI 3">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Mar 05 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .services-page .page-title .heading {
+      padding-top: 130px;
+      padding-bottom: 40px;
+    }
+
+    .services-page .page-title h1 {
+      color: #ffffff;
+    }
+
+    .services-page .page-title p {
+      color: #cccccc;
+    }
+
+    /* Services table */
+    .services-table-wrapper {
+      background: #181818;
+      border: 1px solid #303030;
+      border-radius: 14px;
+      overflow-x: auto;
+      margin-top: 30px;
+    }
+
+    .services-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #ffffff;
+      min-width: 600px;
+    }
+
+    .services-table th,
+    .services-table td {
+      padding: 22px;
+      text-align: left;
+      border-bottom: 1px solid #303030;
+      vertical-align: middle;
+    }
+
+    .services-table thead {
+      background: #222222;
+    }
+
+    .services-table th {
+      color: #18d26e;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .services-table td {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .services-table tbody tr:hover {
+      background: #242424;
+    }
+
+    .services-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .services-table .service-name {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .services-table .service-description {
+      color: #cccccc;
+    }
+
+    .services-table .price {
+      color: #18d26e;
+      font-weight: 700;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    .services-intro {
+      color: #cccccc;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+
+    .services-note {
+      color: #999999;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    /* LD8: HTML lists */
+    .services-lists {
+      margin-top: 50px;
+    }
+
+    .services-list-card {
+      background: #181818;
+      border: 1px solid #303030;
+      border-radius: 14px;
+      padding: 30px;
+      height: 100%;
+    }
+
+    .services-list-card h3 {
+      color: #18d26e;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .services-list-card ul,
+    .services-list-card ol {
+      color: #dddddd;
+      padding-left: 25px;
+      line-height: 2;
+    }
+
+    .services-list-card li {
+      padding-left: 5px;
+      margin-bottom: 8px;
+    }
+
+    .services-list-card li::marker {
+      color: #18d26e;
+    }
+
+    .services-list-card ul ul {
+      margin-top: 8px;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      list-style-type: circle;
+    }
+
+    /* LD8 optional multimedia section */
+    .services-media {
+      margin-top: 55px;
+    }
+
+    .media-section-title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .media-section-intro {
+      color: #cccccc;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .media-card {
+      height: 100%;
+      padding: 22px;
+      background: #181818;
+      border: 1px solid #303030;
+      border-radius: 14px;
+    }
+
+    .media-card h3 {
+      color: #18d26e;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .media-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #101010;
+    }
+
+    .media-frame video,
+    .media-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .media-card audio {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .media-card p {
+      color: #cccccc;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 14px 0 0;
+    }
+  </style>
+
+  <!--
+    Template: Personal by BootstrapMade
+    https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+    License: https://bootstrapmade.com/license/
+  -->
 </head>
 
 <body class="services-page">
 
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename">Georgij Moisejev</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -70,11 +264,16 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Services</h1>
+              <h1>Paslaugos</h1>
+              <p class="mb-0">
+                Programavimo, interneto svetainių kūrimo
+                ir automatizavimo paslaugos.
+              </p>
             </div>
           </div>
         </div>
       </div>
+
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
@@ -83,126 +282,263 @@
           </ol>
         </div>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
-
       <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
-              </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Eosle Commodi</h3>
-              </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Ledo Markt</h3>
-              </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
-              </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Velit Doloremque</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="" class="stretched-link">
-                <h3>Dolori Architecto</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
+        <div class="section-title" data-aos="fade-up">
+          <h2>Paslaugos</h2>
+          <div>
+            <span>Mano</span>
+            <span class="description-title">paslaugos</span>
+          </div>
         </div>
 
-      </div>
+        <p class="services-intro" data-aos="fade-up">
+          Domiuosi programavimu, dirbtiniu intelektu
+          ir šiuolaikinėmis informacinėmis technologijomis.
+          Kuriu interneto svetaines, Python programas
+          ir Windows programinę įrangą.
+          Žemiau pateikiamos pagrindinės paslaugos,
+          jų aprašymai ir preliminarios kainos.
+        </p>
 
-    </section><!-- /Services Section -->
+        <!-- LD8: Table 4 x 3 -->
+        <div class="services-table-wrapper"
+             data-aos="fade-up"
+             data-aos-delay="100">
+
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Paslauga</th>
+                <th>Aprašymas</th>
+                <th>Kaina</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="service-name">
+                  Interneto svetainių kūrimas
+                </td>
+                <td class="service-description">
+                  Asmeninių CV, portfolio ir kitų
+                  interneto svetainių kūrimas
+                  naudojant HTML, CSS ir Bootstrap.
+                  Svetainių pritaikymas skirtingiems
+                  įrenginiams.
+                </td>
+                <td class="price">100 000 000 €</td>
+              </tr>
+
+              <tr>
+                <td class="service-name">
+                  Python automatizavimas
+                </td>
+                <td class="service-description">
+                  Telegram botų kūrimas,
+                  automatizuotas duomenų apdorojimas,
+                  pranešimų analizė ir santraukų
+                  generavimas naudojant Python.
+                </td>
+                <td class="price">80 000 000 €</td>
+              </tr>
+
+              <tr>
+                <td class="service-name">
+                  Programinės įrangos kūrimas
+                </td>
+                <td class="service-description">
+                  Windows programų kūrimas
+                  naudojant C# ir WinUI 3.
+                  Vartotojo sąsajų projektavimas,
+                  duomenų saugojimas ir
+                  programų funkcionalumo kūrimas.
+                </td>
+                <td class="price">150 000 000 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Services Table -->
+
+        <p class="services-note" data-aos="fade-up">
+          * Pateiktos kainos yra preliminarios
+          ir skirtos mokomajam projektui.
+        </p>
+
+        <!-- LD8: Lists -->
+        <div class="services-lists">
+
+          <div class="row gy-4">
+
+            <!-- Unordered List -->
+            <div class="col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+              <div class="services-list-card">
+
+                <h3>
+                  <i class="bi bi-code-slash"></i>
+                  Naudojamos technologijos
+                </h3>
+
+                <ul>
+                  <li>
+                    HTML ir CSS
+                    <!-- Nested List -->
+                    <ul>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>Bootstrap 5</li>
+                    </ul>
+                  </li>
+
+                  <li>Python</li>
+                  <li>C# ir WinUI 3</li>
+                  <li>Git ir GitHub</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Ordered List -->
+            <div class="col-lg-6"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
+
+              <div class="services-list-card">
+
+                <h3>
+                  <i class="bi bi-list-ol"></i>
+                  Svetainės kūrimo etapai
+                </h3>
+
+                <ol>
+                  <li>
+                    Reikalavimų analizė ir svetainės
+                    struktūros planavimas.
+                  </li>
+
+                  <li>
+                    Svetainės dizaino kūrimas
+                    naudojant HTML, CSS ir Bootstrap.
+                  </li>
+
+                  <li>
+                    Svetainės testavimas ir klaidų taisymas.
+                  </li>
+
+                  <li>
+                    Svetainės publikavimas naudojant
+                    GitHub Pages.
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- End Lists -->
+        <!-- LD8: papildoma užduotis - multimedijos įrašai -->
+        <section class="services-media" aria-labelledby="media-title" data-aos="fade-up">
+          <h2 id="media-title" class="media-section-title">Multimedijos įrašai</h2>
+          <p class="media-section-intro">
+            Vaizdo, YouTube ir garso įrašai, susiję su programavimu bei darbu kompiuteriu.
+          </p>
+
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <article class="media-card">
+                <h3>Darbas kompiuteriu</h3>
+                <div class="media-frame">
+                  <video controls preload="metadata" playsinline aria-label="Vaizdo įrašas: žmogus rašo klaviatūra">
+                    <source src="assets/media/typing-on-keyboard.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <p>Žmogus rašo kompiuterio klaviatūra. Vaizdo įrašo šaltinis – Pexels.</p>
+              </article>
+            </div>
+
+            <div class="col-lg-4">
+              <article class="media-card">
+                <h3>YouTube vaizdo įrašas</h3>
+                <div class="media-frame">
+                  <iframe
+                    src="https://www.youtube.com/embed/BoUVIhtqjAw"
+                    title="YouTube vaizdo įrašas apie programavimą"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
+                <p>Vaizdo įrašas įterptas naudojant YouTube embed adresą.</p>
+              </article>
+            </div>
+
+            <div class="col-lg-4">
+              <article class="media-card">
+                <h3>Laikrodžio tiksėjimas</h3>
+                <p>Garso įrašo šaltinis – Pixabay. Failas saugomas aplanke <code>assets/media</code>.</p>
+                <audio controls preload="metadata" aria-label="Laikrodžio tiksėjimo garso įrašas">
+                  <source src="assets/media/quartz-clock-ticking.mp3" type="audio/mpeg">
+                </audio>
+              </article>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+    <!-- End Services Section -->
 
   </main>
 
+  <!-- Footer -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+
+      <h3 class="sitename">Georgij Moisejev</h3>
+
+      <p>
+        VILNIUS TECH studentas.
+        Programavimas, technologijos ir asmeniniai projektai.
+      </p>
+
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/este-microondas"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
-        </div>
+
+      <div class="copyright">
+        <span>Copyright</span>
+        <strong class="px-1 sitename">Georgij Moisejev</strong>
+        <span>2026</span>
       </div>
+
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#"
+     id="scroll-top"
+     class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -223,5 +559,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
