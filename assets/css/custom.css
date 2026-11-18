@@ -1,0 +1,1263 @@
+/* 2a. Font-family: Manrope is loaded once from each page head. */
+
+:root {
+    --default-font: "Manrope", sans-serif;
+    --heading-font: "Manrope", sans-serif;
+    --nav-font: "Manrope", sans-serif;
+}
+
+/* 2b. stiliai */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Manrope", sans-serif;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+h1, .page-title .heading h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.page-title .heading p {
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 12px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+h2, .about .content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #9d00ff;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #9d00ff;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #eeeeee;
+}
+
+h6 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #bbbbbb;
+    text-transform: uppercase;
+}
+
+/* 2c. Pastraipu stilius */
+
+p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #c4cbd6;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+}
+
+.about .content p {
+    padding-left: 16px;
+    border-left: 3px solid #9d00ff;
+    color: #e0e0e0;
+}
+
+/* 3. Mygtuku ir nuorodu stiliai */
+
+/* 3a. Mygtukai */
+
+:root,
+.light-background,
+.dark-background {
+    --accent-color: #9d00ff;
+}
+
+button,
+.btn,
+.btn-get-started,
+.contact .php-email-form button[type="submit"] {
+    background-color: #9d00ff;
+    color: #ffffff;
+    border: 2px solid #9d00ff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Uzvedus pele ant mygtuko */
+
+button:hover,
+.btn:hover,
+.btn-get-started:hover,
+.contact .php-email-form button[type="submit"]:hover {
+    background-color: #4d017d;
+    color: #ffffff;
+    border-color: #d38bff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(110, 1, 118, 0.3);
+}
+
+/* Paspaudus mygtuka */
+
+button:active,
+.btn:active,
+.btn-get-started:active,
+.contact .php-email-form button[type="submit"]:active {
+    background-color: #9d00ff;
+    border-color: #9d00ff;
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+
+/* 3b. Nuorodu stiliai */
+
+main a:not(.btn):not(.btn-get-started),
+footer a {
+    color: #d7a0ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Uzvedus pele ant nuorodos */
+
+main a:not(.btn):not(.btn-get-started):hover,
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Paspaudus nuoroda */
+
+main a:not(.btn):not(.btn-get-started):active,
+footer a:active {
+    color: #d7a0ff;
+}
+
+
+/* 3c. Papildomas pakeitimas */
+
+.navmenu a:hover,
+.navmenu a.active {
+    color: #9d00ff;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #9d00ff;
+    outline-offset: 3px;
+}
+
+/* 4. Elementu isdestymo atnaujinimas */
+
+/* 4a. Margin ir Padding */
+
+/* Apie sekcija */
+
+#about {
+    padding-top: 90px;
+    padding-bottom: 80px;
+}
+
+#about .container > .row {
+    margin-top: 20px;
+    padding: 35px;
+}
+
+/* Patirtis sekcija */
+
+#resume {
+    padding-top: 110px;
+    padding-bottom: 90px;
+}
+
+#resume .resume-title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#resume .resume-item {
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+/* Projektai sekcija */
+
+#portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#portfolio .isotope-layout {
+    margin-top: 30px;
+}
+
+#portfolio .portfolio-item {
+    padding: 12px;
+}
+
+
+/* 4b. Border Radius ir Box Shadow */
+
+/* Apie turinio blokas */
+
+#about .container > .row {
+    background-color: #151d29;
+    border: 1px solid #303b4a;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Apie nuotrauka */
+
+#about .img-fluid {
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Patirties blokai */
+
+#resume .resume-item {
+    background-color: #151d29;
+    border: 1px solid #303b4a;
+    border-left: 3px solid #ad00dd;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Projektu korteles */
+
+#portfolio .portfolio-content {
+    background-color: #151d29;
+    border: 1px solid #303b4a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Projektu korteles uzvedus pele */
+
+#portfolio .portfolio-content:hover {
+    transform: translateY(-5px);
+    border-color: #9d00ff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Pritaikymas telefonams */
+
+@media (max-width: 768px) {
+    #about,
+    #resume,
+    #portfolio {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    #about .container > .row {
+        padding: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #resume .resume-item {
+        padding: 20px;
+    }
+}
+
+/* 5as */
+/* 5a */
+
+/* Navigacijos juostos fonas */
+
+#header {
+    background-color: rgba(15, 20, 30, 0.95);
+    /* Backdrop-filter causes problems for the fixed mobile navigation overlay. */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid #303b4a;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    padding: 15px 0;
+}
+
+/* Svetaines pavadinimas */
+
+#header .sitename {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* Navigacijos nuorodos */
+
+@media (min-width: 1200px) {
+
+    #header .navmenu a {
+        color: #d0d5df;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 15px;
+        margin: 0 3px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* Uzvedus pele */
+
+    #header .navmenu a:hover {
+        color: #d38bff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Aktyvus puslapis */
+
+    #header .navmenu a.active {
+        color: #9d00ff;
+        background-color: #ffffff;
+    }
+
+    /* Paspaudus nuoroda */
+
+    #header .navmenu a:active {
+        color: #9d00ff;
+        background-color: #ffffff;
+    }
+
+    /* Paslepiamas seno sablono pabraukimas */
+
+    #header .navmenu a::before {
+        display: none;
+    }
+}
+
+/* Navigacija telefone */
+
+@media (max-width: 1199px) {
+
+    #header .navmenu ul {
+        background-color: #151d29;
+        border: 1px solid #303b4a;
+        border-radius: 15px;
+    }
+
+    /* Mobile menu toggle must stay visible on the dark header. */
+    #header .mobile-nav-toggle {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        color: #ffffff;
+        font-size: 28px;
+        line-height: 1;
+        margin-right: 0;
+        cursor: pointer;
+    }
+
+    #header .navmenu a {
+        color: #e7e7ed;
+    }
+
+    #header .navmenu a:hover {
+        color: #d38bff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #header .navmenu a.active,
+    #header .navmenu a:active {
+        color: #9d00ff;
+        background-color: #ffffff;
+    }
+
+    /* Keep the original template's mobile open/close mechanism. */
+    .mobile-nav-active #header .navmenu > ul {
+        display: block;
+    }
+
+    .mobile-nav-active #header .mobile-nav-toggle {
+        color: #9d00ff;
+        background-color: #ffffff;
+        border-radius: 9px;
+        padding: 4px 7px;
+    }
+}
+
+/* 5b */
+
+/* Progreso blokai */
+
+#skills .progress {
+    display: block;
+    height: auto;
+    background-color: #151d29;
+    border: 1px solid #303b4a;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Efektas uzvedus pele */
+
+#skills .progress:hover {
+    border-color: #9d00ff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Igudzio pavadinimas */
+
+#skills .progress .skill {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Procentu tekstas */
+
+#skills .progress .skill .val {
+    color: #d7a0ff;
+    font-size: 14px;
+    font-weight: 800;
+    font-style: normal;
+    float: none;
+}
+
+/* Progreso juostos fonas */
+
+#skills .progress .progress-bar-wrap {
+    background-color: #303b4a;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Uzpildyta progreso juostos dalis */
+
+#skills .progress .progress-bar {
+    height: 12px;
+    background: linear-gradient(90deg, #9d00ff, #eb88f4);
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+/* LD8/LD9 Paslaugu puslapio stiliai: laikomi vienoje vietoje */
+
+.services-page .page-title .heading {
+    padding-top: 130px;
+    padding-bottom: 40px;
+}
+
+.services-page .page-title h1 {
+    color: #ffffff;
+}
+
+.services-page .page-title p,
+.services-page .services-intro {
+    color: #cccccc;
+}
+
+.services-page .services-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.services-page .services-note {
+    color: #b8bec8;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.services-page .services-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    color: #ffffff;
+}
+
+.services-page .services-table th,
+.services-page .services-table td {
+    border-bottom: 1px solid #354458;
+}
+
+.services-page .services-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.services-page .services-table .service-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.services-page .services-table .service-description {
+    color: #d6dbe4;
+}
+
+.services-page .services-list-card {
+    height: 100%;
+    padding: 30px;
+    background: #181d27;
+    border: 1px solid #303b4a;
+    border-radius: 16px;
+}
+
+.services-page .services-list-card h3 {
+    color: #9d00ff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.services-page .services-list-card ul,
+.services-page .services-list-card ol {
+    line-height: 1.8;
+}
+
+.services-page .services-list-card li {
+    margin-bottom: 8px;
+}
+
+.services-page .services-media {
+    margin-top: 55px;
+    background: transparent;
+    padding: 0;
+}
+
+.services-page .media-section-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.services-page .media-section-intro {
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.services-page .media-card {
+    height: 100%;
+    padding: 22px;
+    background: #181d27;
+    border: 1px solid #303b4a;
+    border-radius: 14px;
+}
+
+.services-page .media-card h3 {
+    color: #9d00ff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.services-page .media-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #101010;
+}
+
+.services-page .media-frame video,
+.services-page .media-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.services-page .media-card audio {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.services-page .media-card p {
+    color: #d6dbe4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 14px 0 0;
+}
+
+@media (max-width: 575px) {
+    .services-page .services-list-card,
+    .services-page .media-card {
+        padding: 20px;
+    }
+}
+
+/* Papildoma 1. Sarasu stiliai */
+
+/* 1a. Nenumeruotas sarasas */
+
+.services-page .services-list-card > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services-page .services-list-card > ul > li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    color: #eeeeee;
+}
+
+/* Pasirinktiniai saraso simboliai */
+
+.services-page .services-list-card > ul > li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #9d00ff;
+    color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+
+/* 1a. Numeruotas sarasas su CSS Counter */
+
+.services-page .services-list-card > ol {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: zingsnis;
+}
+
+.services-page .services-list-card > ol > li {
+    counter-increment: zingsnis;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+
+/* Automatinis numeravimas */
+
+.services-page .services-list-card > ol > li::before {
+    content: counter(zingsnis, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #9d00ff;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+
+/* 1b. Idetinio saraso stilius */
+
+.services-page .services-list-card > ul > li > ul {
+    list-style: none;
+    background-color: #252e3b;
+    border-left: 3px solid #9d00ff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+
+/* Idetinio saraso elementai */
+
+.services-page .services-list-card > ul > li > ul > li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: #f091f4;
+    font-size: 14px;
+}
+
+/* Idetinio saraso simboliai */
+
+.services-page .services-list-card > ul > li > ul > li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #9d00ff;
+}
+
+/* Papildoma 2. Lenteles stiliai */
+
+/* 2a. Lenteles antrastines eilutes stilius */
+
+.services-page .services-table thead {
+    background: linear-gradient(90deg, #b44dff, #f091f4);
+}
+
+.services-page .services-table thead th {
+    color: #111111;
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #9d00ff;
+}
+
+
+/* 2b. Zebra stilius */
+
+/* Nelygines eilutes */
+
+.services-page .services-table tbody tr:nth-child(odd) {
+    background-color: #141b26;
+}
+
+/* Lygines eilutes */
+
+.services-page .services-table tbody tr:nth-child(even) {
+    background-color: #222d3b;
+}
+
+/* Efektas uzvedus pele ant eilutes */
+
+.services-page .services-table tbody tr:hover {
+    background-color: #354458;
+    transition: background-color 0.3s ease;
+}
+
+
+/* 2c. Cell Padding ir lygiavimas centre */
+
+.services-page .services-table th,
+.services-page .services-table td {
+    padding: 20px 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Papildomas lenteles apipavidalinimas */
+
+.services-page .services-table-wrapper {
+    border: 1px solid #354458;
+    border-radius: 20px;
+    overflow-x: auto;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Kainu spalva */
+
+.services-page .services-table .price {
+    color: #9d00ff;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+/* Pritaikymas telefonams */
+
+@media (max-width: 768px) {
+
+    .services-page .services-table th,
+    .services-page .services-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+}
+
+/* 9 LD: likusiu zaliu akcentu pataisymas */
+
+.services-page .services-list-card li::marker {
+    color: #9d00ff;
+}
+
+/* Projektu korteles: stiliai is portfolio.html perkelti cia. */
+.matlab-card {
+    height: 100%;
+    overflow: hidden;
+    background: #181d27;
+    border: 1px solid #303b4a;
+    border-radius: 16px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.matlab-card:hover {
+    transform: translateY(-5px);
+    border-color: #9d00ff;
+}
+
+.matlab-image {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #f5f5f5;
+}
+
+.matlab-info {
+    padding: 20px;
+}
+
+.matlab-info h4 {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.matlab-info p {
+    color: #d6dbe4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.matlab-info a {
+    color: #d7a0ff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.matlab-info a:hover {
+    color: #d38bff;
+}
+
+.matlab-label {
+    display: block;
+    color: #d7a0ff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* LD10 - CSS animacijos */
+/* 1. Dvi naujos animacijos */
+
+/* 1a. Socialiniu tinklu ikonu animacija */
+
+@keyframes socialFloat {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(-6px);
+        opacity: 0.7;
+    }
+
+    60% {
+        transform: translateY(3px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.social-links a i {
+    display: inline-block;
+    animation: socialFloat 3s ease-in-out infinite;
+}
+
+
+/* 1b. Grizimo i virsu mygtuko animacija */
+
+@keyframes arrowBounce {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(-7px);
+        opacity: 0.7;
+    }
+
+    60% {
+        transform: translateY(2px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#scroll-top i {
+    display: inline-block;
+    animation: arrowBounce 2s ease-in-out infinite;
+}
+
+/* LD10 - 2. Loading Indicator */
+
+/* Dekoratyvinis krovimo indikatorius */
+
+.services-page #services .section-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto 0;
+
+    border: 4px solid #303b4a;
+    border-top: 4px solid #9d00ff;
+    border-radius: 50%;
+
+    animation: spinnerRotate 1s linear infinite;
+}
+
+/* Sukimosi animacija */
+
+@keyframes spinnerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* LD10 - 3. Dekoratyviniai pseudo-elementai */
+
+/* 3a. Antrasciu dekoratyviniai elementai */
+
+.section-title .description-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 28px;
+}
+
+/* Kairysis dekoratyvinis apskritimas */
+
+.section-title .description-title::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+    background-color: #9d00ff;
+    border-radius: 50%;
+
+    animation: decorFloat 2s ease-in-out infinite;
+}
+
+/* Desinioji dekoratyvine juostele */
+
+.section-title .description-title::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 50%;
+
+    width: 16px;
+    height: 5px;
+    background-color: #9d00ff;
+    border-radius: 5px;
+
+    animation: decorPulse 2s ease-in-out infinite;
+}
+
+
+/* 3b. Pseudo-elementu animacijos */
+
+/* Apskritimo judejimas */
+
+@keyframes decorFloat {
+    0% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+
+/* Juosteles pulsavimas */
+
+@keyframes decorPulse {
+    0% {
+        transform: translateY(-50%) scaleX(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%) scaleX(0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-50%) scaleX(1);
+        opacity: 1;
+    }
+}
+
+/* Animaciju isjungimas pagal vartotojo nustatymus */
+
+@media (prefers-reduced-motion: reduce) {
+    .section-title .description-title::before,
+    .section-title .description-title::after {
+        animation: none;
+    }
+}
+
+/* LD10 - Papildoma 1. Animuotas gradientinis fonas */
+
+/* Paslaugu sekcijos fonas */
+
+.services-page #services {
+    background: linear-gradient(
+        120deg,
+        #080808,
+        #210b35,
+        #12051f,
+        #080808
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Gradiento animacija */
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pritaikymas sumazintam judejimui */
+
+@media (prefers-reduced-motion: reduce) {
+    .services-page #services {
+        animation: none;
+    }
+}
+
+/* LD10 - Papildoma 2. CSS figuros */
+
+/* Figuru vieta Apie skiltyje */
+
+#about .content > h2 {
+    position: relative;
+    padding-right: 120px;
+    min-height: 88px;
+}
+
+/* 1. Besisukantis apskritimas */
+
+#about .content > h2::before {
+    content: "";
+    position: absolute;
+    right: 70px;
+    top: 24px;
+
+    width: 46px;
+    height: 46px;
+
+    border: 5px solid #9d00ff;
+    border-right-color: transparent;
+    border-bottom-color: #d28aff;
+    border-radius: 50%;
+
+    pointer-events: none;
+    animation: aboutRotate 5s linear infinite;
+}
+
+/* Apskritimo sukimosi animacija */
+
+@keyframes aboutRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+/* 2. Plaukiojantis trikampis */
+
+#about .content > h2::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 28px;
+
+    width: 44px;
+    height: 44px;
+
+    background: linear-gradient(
+        135deg,
+        #9d00ff,
+        #df9dff
+    );
+
+    clip-path: polygon(
+        50% 0%,
+        0% 100%,
+        100% 100%
+    );
+
+    pointer-events: none;
+    animation: aboutFloat 3s ease-in-out infinite;
+}
+
+/* Trikampio judejimo animacija */
+
+@keyframes aboutFloat {
+    0% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(7deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+}
+
+
+/* Figuru pritaikymas telefonams */
+
+@media (max-width: 575px) {
+    #about .content > h2 {
+        padding-right: 85px;
+    }
+
+    #about .content > h2::before {
+        width: 28px;
+        height: 28px;
+        right: 44px;
+        top: 20px;
+    }
+
+    #about .content > h2::after {
+        width: 28px;
+        height: 28px;
+        right: 5px;
+        top: 24px;
+    }
+}
+
+/* Mazesnio judejimo nustatymai */
+
+@media (prefers-reduced-motion: reduce) {
+    #about .content > h2::before,
+    #about .content > h2::after {
+        animation: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-links a i,
+    #scroll-top i,
+    .services-page #services .section-title::after {
+        animation: none;
+    }
+}
+
+
+/* LD11 - Contact form */
+.contact .php-email-form input[type="tel"],
+.contact .php-email-form input[type="number"] {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.contact .php-email-form input[type="tel"]:focus,
+.contact .php-email-form input[type="number"]:focus {
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+.contact .php-email-form input[type="tel"]::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+.contact .php-email-form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* LD11 - Validacija */
+.contact .php-email-form input.is-invalid {
+  border-color: #ff5555;
+}
+
+.contact .validation-error {
+  display: block;
+  color: #ff5555;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* LD11 - Isvalyti mygtukas */
+.contact .php-email-form #isvalyti {
+  background: transparent;
+  color: var(--default-color);
+  border: 1px solid var(--accent-color);
+  margin-left: 10px;
+}
+
+.contact .php-email-form #isvalyti:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
