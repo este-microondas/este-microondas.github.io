@@ -1,6 +1,23 @@
-Thanks for downloading this template!
+# Asmeninė portfolio svetainė
 
-Template Name: Personal
-Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Ši svetainė sukurta VILNIUS TECH studijų modulio „Skriptinis programavimas“ laboratorinių darbų (LD7–LD12) metu.
+
+## Svetainės nuoroda
+
+https://este-microondas.github.io/
+
+## Autorius
+
+**Georgij Moisejev**
+
+VILNIUS TECH | EDIf-25/1
+
+2026 m.
+
+## Naudotas šablonas
+
+- Šablonas: Personal
+- Kūrėjas: BootstrapMade
+- Licencija: https://bootstrapmade.com/license/
+
+Originalus šablonas buvo modifikuotas ir papildytas pagal laboratorinių darbų reikalavimus.
